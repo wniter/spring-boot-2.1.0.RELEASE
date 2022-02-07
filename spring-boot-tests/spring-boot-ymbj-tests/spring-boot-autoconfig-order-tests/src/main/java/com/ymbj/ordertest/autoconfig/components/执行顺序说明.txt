@@ -1,0 +1,30 @@
+=========ComponentBean============
+=========AService1============
+=========AService2============
+=========Component1============
+=========Component2============
+=========ZComponent============
+=========ZService============
+=========ZZController1============
+=========ZZController2============
+=========ZZZController============
+=========ComponentScanBean2============
+=========ComponentScanBean1============
+=========InScanAutoConfigurationBean============
+=========annoorder.AnnoAutoConfiguration2 Constructor============
+=========annoorder.AutoConfigurationAnnoBean2============
+=========annoorder.AutoConfigurationAnnoBean22============
+
+结论：
+1，component组件（@Component,@Service和@Controller）扫描加载创建顺序为类名自然顺序；
+2，springboot扫描的component组件加载创建顺序优先于@Configuration配置类的@Bean，包括@Configuration配置类上的注解
+   @ComponentScan扫描的bean也是优先于@Configuration配置类中的@Bean创建
+3，springboot扫描的component组件创建顺序为首先是MainApplication的同级目录，然后再按包名自然排序扫描（待验证，猜测是这样）
+4，@Configuration配置类的bean加载创建顺序优先于外部自动配置类的
+
+TODO:1，自己回到公司，验证下这些结论，特别是验证优先创建项目工程内的bean，再创建插件自动配置的bean,
+TODO:插件自动配置又是按照自然排序（没有@AutoConfigureOrder等注解情况下）；
+TODO:2,验证SqlSessionFactoryBean是在执行sql的情况下创建的，而不是@Autowire mapper时创建的；同时探索@Mapper的类是怎么加入spring容器的？
+TODO:3,按照自己总结的规律探索tcp插件自动配置类为何在先加载暴露端口，而Mybatis自动配置类在后呢？
+TODO:4,探究static关键字提升bean创建优先级？以及学习公众号A哥其他配置类的9篇文章
+TODO：5，项目内若优先需要创建插件类的某个bean，可以利用项目内的某个bean @DependsOn 插件内的某个bean，这样插件内的某个bean就会优先创建啦----利用这一特性在公司优先创建SsqlSessionFactoryBean

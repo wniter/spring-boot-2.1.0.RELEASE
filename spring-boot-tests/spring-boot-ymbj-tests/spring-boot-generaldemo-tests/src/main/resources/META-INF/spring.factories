@@ -1,0 +1,4 @@
+# Auto Configure
+# org.springframework.context.ApplicationListener=\
+# CustomSpringBootListener,\
+# CustomSpringBootListener2
