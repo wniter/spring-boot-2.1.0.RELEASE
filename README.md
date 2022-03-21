@@ -20,38 +20,4 @@
 * 更多源码分析文章请跳转至：https://github.com/yuanmabiji/Java-SourceCode-Blogs
 
 
-================**TODO LIST**====================
-
-* SpringMVC
-* Mybatis
-* Dubbo
-* Netty
-* RocketMQ
-* SpringCloud(Eureka,Ribbon,Hystrix,Zuul,Config,Feign...)
-* Shiro
-* Tomcat
-* Seata
-* Canal
-* JUC
-* Kafka
-* Nacos
-* Zookeeper
-* Mycat
-* ......
-
---------------------------------------------
-微信搜：
-
-**公众号：源码笔记**
-
-![img](https://common-ymbj.oss-cn-beijing.aliyuncs.com/%E6%BA%90%E7%A0%81%E7%AC%94%E8%AE%B0%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.PNG)
-
-**联系我：hardwork-persistence**
-
-###### 
-
-
-
-
-
-![img](https://common-ymbj.oss-cn-beijing.aliyuncs.com/%E7%88%B1%E7%BC%96%E7%A0%81%E7%9A%84%E7%A0%81%E5%86%9C%E4%BA%8C%E7%BB%B4%E7%A0%81.PNG)
+一份springboot注释源码笔记
